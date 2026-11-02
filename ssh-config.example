@@ -1,0 +1,23 @@
+# Copy this file to ~/.ssh/config.
+# Replace the bastion public IPv4 address with the value shown in your EC2 console.
+# Keep the private key on your computer; never commit it to GitHub.
+
+Host ewb-bastion
+    HostName BASTION_PUBLIC_IPV4
+    User ec2-user
+    IdentityFile ~/Downloads/ewb-lab.pem
+    IdentitiesOnly yes
+
+Host ewb-app-a
+    HostName 10.10.2.10
+    User ec2-user
+    IdentityFile ~/Downloads/ewb-lab.pem
+    IdentitiesOnly yes
+    ProxyJump ewb-bastion
+
+Host ewb-app-b
+    HostName 10.20.1.10
+    User ec2-user
+    IdentityFile ~/Downloads/ewb-lab.pem
+    IdentitiesOnly yes
+    ProxyJump ewb-bastion
