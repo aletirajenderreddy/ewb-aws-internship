@@ -121,7 +121,7 @@ Expected acceptance criteria after peering and route/security configuration: fou
 
 This repository contains the project design, configuration plan, commands and evidence checklist. AWS-generated resource IDs, the bastion public IPv4 address, terminal output, screenshots, and cleanup proof must be captured from the student's own AWS account. They are deliberately not fabricated in this repository.
 
-See [`docs/submission-evidence.md`](docs/submission-evidence.md) for the exact evidence set required by the workbook.
+See [`architechture.md`](architecture.md) for the exact evidence set required by the workbook.
 
 ## Cost and cleanup
 
